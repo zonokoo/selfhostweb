@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/socials")
+def social():
+    return render_template("social.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
