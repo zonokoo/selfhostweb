@@ -402,10 +402,46 @@
         </main>
     </div>
 
+
     <!-- Bottom Characters -->
     <div class="bottom-characters">
         <div class="character"><img src="{{ url_for('static', filename = 'images/d8de32a59feeccdae2f4fae7008278e3.png') }}"></div>
         <div class="character"><img src="{{ url_for('static', filename = 'images/7318b80d80c0bb1751ae5639b14b082d.png') }}"></div>
     </div>
+
+    <script>
+        // Carousel functionality
+        const images = [
+            "{{ url_for('static', filename='images/3a07127b070e291ed75ed737e9f5b5ff.jpg') }}",
+            "{{ url_for('static', filename='images/sample2.jpg') }}",
+            "{{ url_for('static', filename='images/sample3.jpg') }}"
+        ];
+
+        let currentIndex = 0;
+        const featureImg = document.querySelector('.feature-image img');
+        const leftArrow = document.querySelector('.arrow.left');
+        const rightArrow = document.querySelector('.arrow.right');
+
+        function updateImage() {
+            featureImg.style.opacity = '0';
+            setTimeout(() => {
+                featureImg.src = images[currentIndex];
+                featureImg.style.opacity = '1';
+            }, 300);
+        }
+
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage();
+        });
+
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+        });
+
+        // Add smooth transition
+        featureImg.style.transition = 'opacity 0.3s ease';
+    </script>
 </body>
 </html>
