@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .nav-button {
+      background: #6c6390;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+      padding: 15px 45px;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background: #7a70a8;
+      transform: translateY(-3px);
+    }
+
+    .nav-button.active {
+      background: #8d82c4;
+      font-size: 19px;
+    }
+
+    /* FAQ content */
+    .faq-container {
+      background: rgba(129, 77, 85);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 30px;
+    }
+
+    .faq-question {
+      color: #c197cd;
+      font-size: 30px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-icon {
+      color: #efb4bb;
+      font-size: 24px;
+    }
+
+    .faq-answer {
+      color: #bddcdf;
+      font-size: 25px;
+      line-height: 1.6;
+      padding-left: 34px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-button {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="nav-button" onclick="window.location.href='/'">HOME</button>
+    <button class="nav-button active">FAQ</button>
+  </header>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>How long does it take for you to respond?</div>
+      <div class="faq-answer">initially within 1-2 days if working on project 1-12 H</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>whats your specialization in?</div>
+      <div class="faq-answer">Anime character designs computer component modelling and low poly designs</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>Are you available for commissions?</div>
+      <div class="faq-answer">currently i do not take commissions i do however have plans to start it soon and will look into it before accepting it</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>what payment method do you accept for future commisions</div>
+      <div class="faq-answer">UPI preferably google pay i take 50% upfront</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>can i get refunds?</div>
+      <div class="faq-answer">they are available before the final model is done you will also receive updates for the projects if you want to anything configured</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>do you animate the models?</div>
+      <div class="faq-answer">currently i do not but i have plans to in the future</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>will the files be optimized?</div>
+      <div class="faq-answer">i will try my best to optimize them but i am again somewhat new to blender</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>what files will be provided</div>
+      <div class="faq-answer">the latest .blend files of the project</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>how long will it take?</div>
+      <div class="faq-answer">depends on the project provided could range from a few days to 2-3 weeks i do not accept projects bigger than that</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>will my commissions be posted publicly?</div>
+      <div class="faq-answer">default yes if asked not to then they will not be posted end to end encrypted :D</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question"><span class="faq-icon">❀</span>cats or dogs?</div>
+      <div class="faq-answer">i personally eat both.</div>
+    </div>
+  </div>
+
+</body>
+</html>

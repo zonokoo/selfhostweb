@@ -10,5 +10,9 @@ def home():
 def social():
     return render_template("social.html")
 
+@app.route("/FAQ")
+def FAQ():
+    return render_template("FAQ.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
