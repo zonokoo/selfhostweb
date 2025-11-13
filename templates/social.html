@@ -23,7 +23,7 @@
     .sidebar {
         background: linear-gradient(180deg, #7d6a9f 0%, #6b5d8a 100%);
         border-radius: 40px;
-        padding: 40px 30px;
+        padding: 40px 15px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         position: sticky;
         top: 20px;
@@ -133,12 +133,12 @@
         gap: 30px;
     }
 
-    /* Top Navigation */
+    /* Top Navigation --- MODIFIED */
     .top-nav-social {
         display: flex;
-        justify-content: center;
-        gap: 30px;
+        justify-content: space-between; /* Changed from 'center' to 'space-between' */
         align-items: center;
+        /* 'gap' is no longer needed if they are at opposite ends */
     }
 
     .nav-button-social {
@@ -164,7 +164,7 @@
         padding: 25px 80px;
     }
 
-    /* Discord Icon */
+    /* Discord Icon --- MODIFIED */
     .discord-icon {
         background: linear-gradient(135deg, #7d6a9f 0%, #5a4d73 100%);
         width: 120px;
@@ -172,7 +172,7 @@
         border-radius: 30px;
         position: relative;
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        margin-left: auto;
+        /* 'margin-left: auto;' was removed to allow flex to position it */
     }
 
     .discord-icon::before,
@@ -273,10 +273,8 @@
 
         .top-nav-social {
             flex-wrap: wrap;
-        }
-
-        .discord-icon {
-            display: none;
+            justify-content: center; /* On smaller screens, let them center */
+            gap: 20px;
         }
     }
 
@@ -304,7 +302,6 @@
 
 {% block content %}
 <div class="container-social">
-    <!-- Left Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-divider"></div>
 
@@ -324,21 +321,18 @@
         </div>
     </aside>
 
-    <!-- Main Content -->
     <main class="social-main-content">
-        <!-- Top Navigation -->
+
         <div class="top-nav-social">
-            <a href="/" class="nav-button-social">HOME</a>
-            <a href="#socials" class="nav-button-social socials">SOCIALS</a>
+            <div class="discord-icon"></div>
+
             <div class="discord-icon"></div>
         </div>
 
-        <!-- Feature Image -->
         <div class="feature-image">
             <img src="{{ url_for('static', filename='images/3a07127b070e291ed75ed737e9f5b5ff.jpg') }}" alt="Featured 3D Model">
         </div>
 
-        <!-- Arrow Navigation -->
         <div class="arrow-nav">
             <div class="arrow left"></div>
             <div class="arrow-connector"></div>
